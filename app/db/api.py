@@ -9,7 +9,7 @@ from app.constants import APP_BASE64_KEY
 
 
 def connect():
-    connection = _mongo_connect('groceries-bot', host='clrn.ddns.net', username='groceries-bot', password='Uw6q)3D;-w3wfnA#')
+    connection = _mongo_connect('groceries-bot-mongo', host='localhost')
     logging.info(f"Connecting to {connection}")
 
 

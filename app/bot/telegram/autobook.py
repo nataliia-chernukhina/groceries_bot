@@ -1,5 +1,6 @@
 # Filter class to store filters setting per chat/chain
 
+import os
 import json
 import logging
 from telegram.ext import Updater
@@ -20,7 +21,7 @@ from app.log import app_exception
 
 
 class Autobook(object):
-    BOT_TOKEN = '1579751582:AAEcot5v5NLyxXB1uFYQiBCyvBAsKOzGGsU'
+    BOT_TOKEN = os.getenv('BOT_TOKEN')
     BOT = Updater(BOT_TOKEN, use_context=True).bot
 
     @staticmethod
