@@ -21,7 +21,7 @@ from app.log import app_exception
 
 
 class Autobook(object):
-    BOT_TOKEN = os.getenv('BOT_TOKEN')
+    BOT_TOKEN = os.getenv("BOT_TOKEN")
     BOT = Updater(BOT_TOKEN, use_context=True).bot
 
     @staticmethod

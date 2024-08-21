@@ -1,3 +1,4 @@
+import os
 import logging
 from mongoengine import connect as _mongo_connect
 import base64
@@ -9,7 +10,7 @@ from app.constants import APP_BASE64_KEY
 
 
 def connect():
-    connection = _mongo_connect('groceries-bot-mongo', host='localhost')
+    connection = _mongo_connect("groceries-bot-mongo", host=os.getenv("MONGO_HOST"))
     logging.info(f"Connecting to {connection}")
 
 
